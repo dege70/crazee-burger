@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Loginform from "./components/Loginform"
+import LoginPage from "./components/pages/LoginPage";
 
-function App() {
+function App () {
+  // state (état, données)
+  const [login, setLogin] = useState("");
+
+  // comportements
+
+  const handleAdd = (loginAAjouter) => {
+    // 1. copie du state
+    const loginCopy= [...login];
+
+    // 2. manipulation sur la copie du state
+    loginCopy.push({ loginAAjouter });
+
+    // 3. modifier le state avec le setter
+    setLogin(loginCopy);
+  }
+
+  // affichage (render)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Salut David</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <LoginPage />
+      <h1>Bienvenue chez nous !</h1>
+      <h2>Connectez-vous</h2>
+      <Loginform handleAdd={handleAdd} />
     </div>
-  );
+  );  
 }
 
 export default App;
