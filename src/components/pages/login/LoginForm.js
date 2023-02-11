@@ -2,17 +2,17 @@ import React, { useState } from 'react'
 
 export default function LoginForm() {
   // state
-  const [login, setLogin] = useState("");
+  const [userName, setuserName] = useState("");
 
   // comportements
   const handleSubmit = (event) => {
     event.preventDefault()
-    alert(`Bonjour ${login}`)
-    setLogin("")
+    alert(`Bonjour ${userName}`)
+    setuserName("")
   }
 
   const handleChange = (event) => { 
-    setLogin(event.target.value)
+    setuserName(event.target.value)
   }
 
   // affichage 
@@ -22,7 +22,7 @@ export default function LoginForm() {
         <br />
         <h2>Connectez-vous</h2>
         <form action="submit" onSubmit={handleSubmit}>
-            <input value={login} type="text" placeholder="Entrez votre prénom..." required onChange={handleChange}/>
+            <input value={userName} type="text" placeholder="Entrez votre prénom..." required onChange={handleChange}/>
         <button>Accéder à votre espace</button>
         </form>
     </div>
