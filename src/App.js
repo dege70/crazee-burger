@@ -1,23 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import "../src/App.css"
+import LoginPage from "./components/pages/login/LoginPage";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Salut David</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+function App () {
+  return <LoginPage />
 }
 
 export default App;
