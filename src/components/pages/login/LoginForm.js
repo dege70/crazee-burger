@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function LoginForm() {
   // state
@@ -24,10 +24,8 @@ export default function LoginForm() {
         <h2>Connectez-vous</h2>
         <form action="submit" onSubmit={handleSubmit}>
             <input value={userName} type="text" placeholder="Entrez votre prénom..." required onChange={handleChange} name={userName}/>
-        <NavLink to="/order">  
-          <button>Accéder à votre espace</button>
-        </NavLink>
-        
+            <button>Accéder à votre espace</button>
+            <Link to="/order">Vers OrderPage</Link>
         </form>
     </div>
   )
