@@ -1,14 +1,14 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-export default function OrderPage() {
+export default function OrderPage( {name} ) {
   return (
     <div>
-       <h1>Bonjour</h1>
+       <h1>Bonjour {name}</h1>
        <br />
-        <NavLink to="/">
+        <Link to="/">
             <button>Déconnexion</button>
-        </NavLink> 
+        </Link> 
     </div>
   )
 }
