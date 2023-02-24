@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function OrderPage( {name} ) {
+export default function OrderPage() {
   return (
     <div>
-       <h1>Bonjour {name}</h1>
+       <h1>Bonjour</h1>
        <br />
         <Link to="/">
             <button>Déconnexion</button>
